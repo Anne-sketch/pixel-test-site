@@ -61,6 +61,9 @@
   <button onclick="fbq('trackCustom', 'ViewFAQ'); alert('📖 已触发 ViewFAQ 自定义事件')">
   ❓ 查看常見問題
 </button>
+ fbq('trackCustom', 'ViewFAQ', {
+  section: 'shipping_policy'
+})
 
 
 </body>
