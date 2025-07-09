@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meta Pixel 測試頁面</title>
 
   <!-- Meta Pixel Code -->
@@ -48,8 +48,9 @@
 <body>
 
   <h1>👋 歡迎來到 Pixel 測試站！</h1>
-  <p>這是一個用來測試 Facebook Pixel 事件的簡單頁面。</p>
+  <p>這是一個用來測試 Facebook Pixel 事件的進階頁面。</p>
 
+  <!-- 標準事件 -->
   <button onclick="fbq('track', 'AddToCart'); alert('🛒 已觸發加購事件')">
     🛒 模擬加購
   </button>
@@ -57,14 +58,19 @@
   <button onclick="fbq('track', 'Purchase', {value: 1998, currency: 'TWD'}); alert('💰 已觸發購買事件')">
     💰 模擬購買
   </button>
-  
-  <button onclick="fbq('trackCustom', 'ViewFAQ'); alert('📖 已触发 ViewFAQ 自定义事件')">
-  ❓ 查看常見問題
-</button>
- fbq('trackCustom', 'ViewFAQ', {
-  section: 'shipping_policy'
-})
 
+  <!-- 自訂事件 -->
+  <button onclick="fbq('trackCustom', 'ViewFAQ', {section: 'shipping_policy'}); alert('📖 已觸發：配送政策')">
+    ❓ 查看常見問題（配送政策）
+  </button>
+
+  <button onclick="fbq('trackCustom', 'ViewFAQ', {section: 'return_policy'}); alert('📖 已觸發：退貨政策')">
+    🔁 查看常見問題（退貨政策）
+  </button>
+
+  <button onclick="fbq('trackCustom', 'ViewFAQ', {section: 'payment_methods'}); alert('📖 已觸發：付款方式')">
+    💳 查看常見問題（付款方式）
+  </button>
 
 </body>
 </html>
