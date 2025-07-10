@@ -1,3 +1,4 @@
+<!-- 修正版 index.html，標準事件用 track，自訂事件用 trackCustom -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -50,7 +51,7 @@
   <h1>👋 歡迎來到 Pixel 測試站！</h1>
   <p>這是一個用來測試 Facebook Pixel 事件的進階頁面。</p>
 
-  <!-- 標準事件 -->
+  <!-- ✅ 標準事件 -->
   <button onclick="fbq('track', 'AddToCart'); alert('🛒 已觸發加購事件')">
     🛒 模擬加購
   </button>
@@ -59,7 +60,7 @@
     💰 模擬購買
   </button>
 
-  <!-- 自訂事件 -->
+  <!-- ✅ 自訂事件 -->
   <button onclick="fbq('trackCustom', 'ViewFAQ', {section: 'shipping_policy'}); alert('📖 已觸發：配送政策')">
     ❓ 查看常見問題（配送政策）
   </button>
